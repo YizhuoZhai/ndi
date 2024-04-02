@@ -4,7 +4,8 @@
 # LLVM version: 15.0.0
 
 ROOT=$(git rev-parse --show-toplevel)
-cd $ROOT/llvm/llvm-project
+git clone https://github.com/llvm/llvm-project.git
+cd $ROOT/llvm/llvm-project && git checkout llvmorg-15.0.0
 
 if [ ! -d "build" ]; then
   mkdir build
